@@ -13,7 +13,8 @@ import java.util.UUID;
 @Setter
 @Getter
 @Builder
-@Entity(name = "user")
+@Entity
+@Table(name = "users")
 public class UserEntity {
 
     @Id
