@@ -3,6 +3,8 @@ package br.com.foodbridge.modules.user.db.entity;
 import br.com.foodbridge.modules.user.enums.RoleEnumType;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -44,8 +46,10 @@ public class UserEntity {
     @JoinColumn(name = "address_id")
     private AddressEntity address;
 
-    private LocalDate created_at = LocalDate.now();
+    @CreationTimestamp
+    private LocalDate created_at;
 
+    @UpdateTimestamp
     private LocalDate update_at;
 
 
