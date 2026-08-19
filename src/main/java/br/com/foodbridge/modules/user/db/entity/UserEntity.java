@@ -40,8 +40,9 @@ public class UserEntity {
     @Column(nullable = false)
     private RoleEnumType role;
 
-    @OneToMany
-    private UUID address_id;
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private AddressEntity address;
 
     private LocalDate created_at = LocalDate.now();
 
