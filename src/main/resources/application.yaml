@@ -1,0 +1,13 @@
+spring:
+
+  application:
+    name: foodbridge
+
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/foodbridge
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
