@@ -1,0 +1,10 @@
+package br.com.foodbridge.modules.user.db.repository;
+
+import br.com.foodbridge.modules.user.db.entity.AddressEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public interface IAddressRepository extends JpaRepository<AddressEntity,UUID> {}
